@@ -1,0 +1,130 @@
+/* CSS DOKUMENT K ÚPRAVĚ */
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.page__header {
+    align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .page__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-grow: 1;
+        gap: 30px;
+    }
+    .search-list {
+        /* width: 40%; */
+    }
+    .playlist {
+        
+        
+    }
+}
+
+.search-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-list__content, .playlist__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* track-widget = komponenta položky playlistu  */
+.track-widget {
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    align-items: center;
+    gap: 10px;
+}
+
+.track-widget__thumbnail {
+    
+}
+
+.track-widget__description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-widget__footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.track-widget--selected {
+    display: flex;
+    order: -1;
+    align-items: center;
+}
+
+.track-widget--selected::before {
+    content: "";
+    width: 4px;
+    height: 60%;
+    background-color: var(--spotify, greenyellow);
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+
+/* bar = obsah footer webu */
+.bar {
+    font-size: 0.9em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+@media screen and (min-width: 1440px) {
+    .bar {
+        gap: 10%;
+        flex-direction: row;
+    }
+}
+
+.bar__player {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.player-controls {
+    flex-grow: 1;
+}
+
+.player-progress {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.player-progress__line {
+    position: relative;
+    height: 0.25em;
+    background-color: var(--gray, gray);
+    border-radius: 0.25em;
+    flex-grow: 1;
+}
+
+.bar__controls {
+    
+}
